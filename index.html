@@ -111,6 +111,22 @@
 
 
 <script>
+  document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+  });
+</script>
+
+
+<script>
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+
+<script>
   function playWithSound() {
     const video = document.getElementById('background-video');
     const overlay = document.getElementById('video-overlay');
