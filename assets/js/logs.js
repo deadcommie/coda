@@ -4,7 +4,7 @@ function fetchGoogleMapsLocation(latitude, longitude) {
 
 function fetchWeatherData(city) {
     const apiKey = "04156fa1016d4d03ba651651240510";
-    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
+    const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
 
     return fetch(apiUrl)
         .then(response => response.json())
